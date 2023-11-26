@@ -5,6 +5,7 @@ import Navbar from "./_components/Navbar";
 import { Providers } from "./providers";
 import { Flex } from "@chakra-ui/react";
 import Main from "./_components/Main";
+import Footer from "./_components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Props) {
         <Providers>
           <Navbar />
           <Main>{children}</Main>
+          <Footer />
         </Providers>
       </body>
     </html>

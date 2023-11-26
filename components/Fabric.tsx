@@ -22,13 +22,14 @@ const Fabric = React.forwardRef<SVGSVGElement, Props>(
       cellSize = 24,
       showGrid = false,
       gridColor = "#ffffff",
+      selectedFill,
       className,
       children,
     },
     ref
   ) => {
     return (
-      <FabricProvider cellSize={cellSize}>
+      <FabricProvider cellSize={cellSize} selectFill={selectedFill}>
         <svg
           ref={ref}
           className={className}

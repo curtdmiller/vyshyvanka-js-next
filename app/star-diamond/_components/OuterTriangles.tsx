@@ -14,8 +14,16 @@ function G({
 
   return (
     <g
-      onMouseDown={() => setMousedown(true)}
-      onMouseUp={() => setMousedown(false)}
+      onMouseDown={(e) => {
+        if (!e.shiftKey) {
+          setMousedown(true);
+        }
+      }}
+      onMouseUp={(e) => {
+        if (!e.shiftKey) {
+          setMousedown(false);
+        }
+      }}
       {...rest}
       style={{ opacity: mousedown ? 0.5 : 1 }}
     >
@@ -28,21 +36,27 @@ export default function OuterTriangles() {
   const { state, dispatch } = useStar();
 
   function tempoDown(e: React.MouseEvent<SVGGElement, MouseEvent>) {
-    Tone.Transport.bpm.value = Tone.Transport.bpm.value - 8;
+    if (!e.shiftKey) {
+      Tone.Transport.bpm.value = Tone.Transport.bpm.value - 8;
+    }
   }
 
   function tempoUp(e: React.MouseEvent<SVGGElement, MouseEvent>) {
-    Tone.Transport.bpm.value = Tone.Transport.bpm.value + 8;
+    if (!e.shiftKey) {
+      Tone.Transport.bpm.value = Tone.Transport.bpm.value + 8;
+    }
   }
 
   function volumeUp(e: React.MouseEvent<SVGGElement, MouseEvent>) {
-    if (state.volumeLevel < -4) {
+    if (!e.shiftKey && state.volumeLevel < -4) {
       dispatch({ type: "setVolume", volume: state.volumeLevel + 2 });
     }
   }
 
   function volumeDown(e: React.MouseEvent<SVGGElement, MouseEvent>) {
-    dispatch({ type: "setVolume", volume: state.volumeLevel - 2 });
+    if (!e.shiftKey) {
+      dispatch({ type: "setVolume", volume: state.volumeLevel - 2 });
+    }
   }
 
   return (
