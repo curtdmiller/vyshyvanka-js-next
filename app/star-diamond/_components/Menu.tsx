@@ -67,8 +67,8 @@ export default function Menu({ handleExport, color, onColorChange }: Props) {
         Export SVG
       </Button>
       <Box mt="5" display={["none", null, "block"]}>
-        <Text mb="2">
-          <Kbd>shift</Kbd>+<Kbd>click</Kbd> color
+        <Text mb="2" fontWeight="semibold">
+          Draw Color
         </Text>
         <GithubPicker
           color={color}
@@ -79,6 +79,9 @@ export default function Menu({ handleExport, color, onColorChange }: Props) {
           triangle="hide"
           width="163px"
         />
+        <Text mt="2">
+          (<Kbd>shift</Kbd>+<Kbd>click</Kbd> to draw)
+        </Text>
       </Box>
     </Flex>
   );
