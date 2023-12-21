@@ -14,7 +14,6 @@ import InnerSquare from "./_components/InnerSquare";
 import OuterDiamonds from "./_components/OuterDiamonds";
 import OuterTriangles from "./_components/OuterTriangles";
 import Menu from "./_components/Menu";
-import InfoDialog from "./_components/InfoDialog";
 
 export default function StarDiamond() {
   const svgRef = React.useRef<SVGSVGElement>(null);

@@ -51,7 +51,7 @@ const Fabric = React.forwardRef<SVGSVGElement, Props>(
                 y1="0"
                 x2="100%"
                 y2="0"
-                stroke={gridColor ? gridColor : "white"}
+                stroke={gridColor}
                 strokeWidth={2}
               />
               <line
@@ -59,7 +59,7 @@ const Fabric = React.forwardRef<SVGSVGElement, Props>(
                 y1="0"
                 x2="0"
                 y2="100%"
-                stroke={gridColor ? gridColor : "white"}
+                stroke={gridColor}
                 strokeWidth={2}
               />
             </pattern>

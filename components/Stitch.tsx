@@ -31,6 +31,7 @@ export default function Stitch({
 
   return (
     <rect
+      className="stitch"
       width={cellSize}
       height={cellSize}
       fill={currentFill}

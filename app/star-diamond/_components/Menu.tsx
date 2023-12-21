@@ -3,32 +3,9 @@
 import { Box, Button, Flex, Kbd, Text, useDisclosure } from "@chakra-ui/react";
 import * as React from "react";
 import { FaDownload, FaQuestion } from "react-icons/fa";
-import { ColorResult, GithubPicker } from "react-color";
-import { colors } from "@/theme/colors";
+import { GithubPicker } from "react-color";
+import { colorPickerOptions, colors } from "@/theme/colors";
 import InfoDialog from "./InfoDialog";
-
-const customColorOptions = [
-  "#000000",
-  colors.darkGray,
-  colors.gray,
-  colors.offWhite,
-  "#FFFFFF",
-  colors.darkRed,
-  colors.red,
-  colors.lightRed,
-  colors.darkOrange,
-  colors.orange,
-  colors.lightOrange,
-  colors.darkYellow,
-  colors.yellow,
-  colors.lightYellow,
-  colors.darkGreen,
-  colors.green,
-  colors.lightGreen,
-  colors.darkBlue,
-  colors.blue,
-  colors.lightBlue,
-];
 
 interface Props {
   handleExport: () => void;
@@ -75,7 +52,7 @@ export default function Menu({ handleExport, color, onColorChange }: Props) {
           onChange={(color) => {
             onColorChange(color.hex);
           }}
-          colors={customColorOptions}
+          colors={colorPickerOptions}
           triangle="hide"
           width="163px"
         />

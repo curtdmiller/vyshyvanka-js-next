@@ -18,3 +18,26 @@ export const colors = {
   green: "#108f64",
   lightGreen: "#16c489",
 };
+
+export const colorPickerOptions = [
+  "#000000",
+  colors.darkGray,
+  colors.gray,
+  colors.offWhite,
+  "#FFFFFF",
+  colors.darkRed,
+  colors.red,
+  colors.lightRed,
+  colors.darkOrange,
+  colors.orange,
+  colors.lightOrange,
+  colors.darkYellow,
+  colors.yellow,
+  colors.lightYellow,
+  colors.darkGreen,
+  colors.green,
+  colors.lightGreen,
+  colors.darkBlue,
+  colors.blue,
+  colors.lightBlue,
+];

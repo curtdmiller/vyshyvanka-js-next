@@ -103,7 +103,7 @@ a {
   }
 }
 
-svg g rect:hover {
+rect.stitch:hover {
   /* fill-opacity: 0.5; */
   filter: invert(1);
   cursor: crosshair;
