@@ -82,7 +82,7 @@ function Horizontal() {
     channel.current.send("synth-channel");
     synth.current = new Tone.MonoSynth({
       ...defaultMonoSettings,
-      volume: -15,
+      volume: -10,
     }).connect(channel.current);
     return () => {
       synth.current?.dispose();

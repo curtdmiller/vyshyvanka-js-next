@@ -22,7 +22,7 @@ type Dispatch = (action: Action) => void;
 
 const defaultState: State = {
   pitchShiftPitch: 0,
-  volumeLevel: -6,
+  volumeLevel: 0,
   reverbMute: true,
   delayMute: true,
 };
@@ -66,7 +66,7 @@ export function StarContextProvider({
   const [state, dispatch] = React.useReducer(starReducer, defaultState);
 
   React.useEffect(() => {
-    volume.current = new Tone.Volume(-6).toDestination();
+    volume.current = new Tone.Volume(0).toDestination();
     pitchShift.current = new Tone.PitchShift().connect(volume.current);
     delayGain.current = new Tone.Gain(0).connect(pitchShift.current);
     delay.current = new Tone.FeedbackDelay({

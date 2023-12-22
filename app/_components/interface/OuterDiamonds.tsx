@@ -21,7 +21,7 @@ export default function OuterDiamonds() {
       feedback: 0.5,
       wet: 0.2,
     });
-    synth.current = new Tone.FMSynth({ volume: -9 }).chain(
+    synth.current = new Tone.FMSynth({ volume: 0 }).chain(
       delay.current,
       channel.current
     );

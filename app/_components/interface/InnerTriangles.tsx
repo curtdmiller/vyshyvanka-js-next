@@ -27,7 +27,7 @@ function TriangleGroup({
   const channel = React.useRef<null | Tone.Channel>(null);
 
   React.useEffect(() => {
-    channel.current = new Tone.Channel({ volume: synthVol ? synthVol : -6 });
+    channel.current = new Tone.Channel({ volume: synthVol ? synthVol : -3 });
     channel.current.send("synth-channel");
     synth.current = new Tone.FMSynth({ ...defaultFMSettings }).connect(
       channel.current

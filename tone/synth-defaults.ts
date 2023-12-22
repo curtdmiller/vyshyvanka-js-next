@@ -16,7 +16,7 @@ export const defaultFMSettings: RecursivePartial<FMSynthOptions> = {
     release: 2,
     attackCurve: "sine",
   },
-  volume: -9,
+  volume: 0,
 };
 export const defaultMonoSettings: RecursivePartial<MonoSynthOptions> = {
   oscillator: { type: "sawtooth" },
@@ -35,5 +35,5 @@ export const defaultMonoSettings: RecursivePartial<MonoSynthOptions> = {
     release: 2,
     sustain: 0.5,
   },
-  volume: -12,
+  volume: -3,
 };
