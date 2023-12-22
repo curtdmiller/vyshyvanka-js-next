@@ -8,12 +8,7 @@ export default function NestedDiamonds() {
 
   return (
     <React.Fragment>
-      <Fabric
-        gridSize={[41, 41]}
-        backgroundColor="#fff"
-        // showGrid
-        // gridColor="#333"
-      >
+      <Fabric gridSize={[41, 41]}>
         <Diamond
           diameter={41}
           filled
@@ -65,12 +60,7 @@ export default function NestedDiamonds() {
           setSelected={setSelectAll}
         />
       </Fabric>
-      <Fabric
-        gridSize={[41, 41]}
-        backgroundColor="#fff"
-        // showGrid
-        // gridColor="#333"
-      >
+      <Fabric gridSize={[41, 41]}>
         <Diamond
           diameter={41}
           fill="#ff0000"
