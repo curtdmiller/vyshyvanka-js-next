@@ -1,23 +1,18 @@
 "use client";
 
 import * as React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Menu,
-  MenuButton,
-  Button,
-  MenuList,
-  MenuItem,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
-import styles from "../page.module.css";
-import { FaChevronDown } from "react-icons/fa";
+import styles from "../../page.module.css";
 
 export default function Navbar() {
   return (
-    <Flex as="header" p={3} justifyContent="space-between">
+    <Flex
+      as="header"
+      p={3}
+      justifyContent="space-between"
+      flexDir={["column", null, "row"]}
+    >
       <Box marginTop={-3}>
         <Link href="/" _hover={{ textDecoration: "none" }}>
           <Heading
@@ -29,7 +24,7 @@ export default function Navbar() {
           </Heading>
         </Link>
       </Box>
-      <Flex alignItems="center">
+      <Flex alignItems="center" justifyContent={["flex-end"]}>
         <Link href="./about" color="blue.600" marginLeft="3">
           About
         </Link>
@@ -39,7 +34,7 @@ export default function Navbar() {
         <Link href="./gallery" color="blue.600" marginLeft="3">
           Gallery
         </Link>
-        <Link href="./star-diamond" color="blue.600" marginLeft="3">
+        <Link href="./" color="blue.600" marginLeft="3">
           Interface
         </Link>
       </Flex>

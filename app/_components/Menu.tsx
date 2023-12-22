@@ -4,8 +4,8 @@ import { Box, Button, Flex, Kbd, Text, useDisclosure } from "@chakra-ui/react";
 import * as React from "react";
 import { FaDownload, FaQuestion } from "react-icons/fa";
 import { GithubPicker } from "react-color";
-import { colorPickerOptions, colors } from "@/theme/colors";
-import InfoDialog from "./InfoDialog";
+import { colorPickerOptions } from "@/theme/colors";
+import InfoDialog from "./interface/InfoDialog";
 
 interface Props {
   handleExport: () => void;
@@ -40,6 +40,7 @@ export default function Menu({ handleExport, color, onColorChange }: Props) {
         size="sm"
         onClick={handleExport}
         leftIcon={<FaDownload />}
+        display={["none", null, "block"]}
       >
         Export SVG
       </Button>

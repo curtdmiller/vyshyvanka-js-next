@@ -55,7 +55,7 @@ export default function Draw() {
   }
 
   return (
-    <Container>
+    <Container maxW="container.sm">
       <Heading>Free Draw</Heading>
       <Box mt="4" mb="4">
         <Text>Size</Text>
