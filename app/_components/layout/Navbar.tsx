@@ -18,6 +18,7 @@ export default function Navbar() {
           <Heading
             fontSize={{ base: "md", sm: "xl", md: "2xl", lg: "3xl" }}
             fontWeight="medium"
+            color="black"
           >
             Вишиванка.js
             <span className={styles.logoSlash}>/</span>Vyshyvanka.js
